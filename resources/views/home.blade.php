@@ -27,7 +27,9 @@
 
             <div class="panel panel-default">
                 <div class="panel-body">
+
                     @{{message}}
+
                 </div>
             </div>
 
