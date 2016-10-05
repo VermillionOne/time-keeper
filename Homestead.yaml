@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.20"
+memory: 2048
+cpus: 1
+hostname: time-keeper
+name: time-keeper
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "/Users/Vermillion/time-keeper"
+      to: "/home/vagrant/time-keeper"
+
+sites:
+    - map: local.time-keeper.com
+      to: "/home/vagrant/time-keeper/public"
+
+databases:
+    - homestead
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
