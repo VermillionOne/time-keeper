@@ -13,9 +13,35 @@ require('./bootstrap');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-const app = new Vue({
+Vue.component('example', require('./components/Example.vue'));
+
+var app = new Vue({
     el: 'body',
     data: {
-        message: 'This is where the data will go.'
+        message: 'Something',
+        times: [
+            { startTime: '' },
+            { endTime: ''}
+        ]
+    },
+    methods: {
+        addTime: function () {
+            var startTime = this.startTime,
+                endTime = this.endTime;
+            if (text) {
+                this.times.push(
+                    { startTime : startTime },
+                    { endTime   : endTime }
+                );
+                this.newTime = '';
+            }
+        },
+        addToList: function (index) {
+            this.listItem.splice(index, 1);
+        }
     }
+});
+
+$('document').ready(function () {
+    console.log('Ready for action!');
 });
