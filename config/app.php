@@ -15,9 +15,6 @@ return [
 
     'name' => 'Logr',
 
-    'name' => 'Time Keeper',
-
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment
