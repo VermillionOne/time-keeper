@@ -17,8 +17,13 @@ class Project extends Model
         'elapsed_time'
     ];
 
-    public function times()
+    public function user()
     {
-        return $this->hasMany(Project::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function assignment()
+    {
+        return $this->hasMany(Assignment::class);
     }
 }

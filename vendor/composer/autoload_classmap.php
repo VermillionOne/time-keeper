@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Assignment' => $baseDir . '/app/Assignment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -50,7 +51,10 @@ return array(
     'Collective\\Html\\HtmlBuilder' => $vendorDir . '/laravelcollective/html/src/HtmlBuilder.php',
     'Collective\\Html\\HtmlFacade' => $vendorDir . '/laravelcollective/html/src/HtmlFacade.php',
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
+    'CreateAssignmentProjectPivotTable' => $baseDir . '/database/migrations/2016_10_19_200106_create_assignment_project_pivot_table.php',
+    'CreateAssignmentsTable' => $baseDir . '/database/migrations/2016_10_19_200106_create_assignments_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateProjectUserPivotTable' => $baseDir . '/database/migrations/2016_10_19_200231_create_project_user_pivot_table.php',
     'CreateProjectsTable' => $baseDir . '/database/migrations/2016_10_10_004721_create_projects_table.php',
     'CreateTimesTable' => $baseDir . '/database/migrations/2016_10_09_145304_create_times_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
