@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Time extends Model
+class Assignment extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,13 +12,16 @@ class Time extends Model
      * @var array
      */
     protected $fillable = [
-        'start_time',
-        'end_time',
-        'elapsed_time'
+        'assignment_title'
     ];
 
     public function project()
     {
-        return $this->belongsTo(Assignment::class);
+        return $this->belongsTo(Project::class)
+    }
+
+    public function times()
+    {
+        return $this->hasMany(Time::class);
     }
 }

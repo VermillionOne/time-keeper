@@ -85,6 +85,8 @@ var app = new Vue({
                 console.log(title);
                 console.log(this.assignments);
                 this.assignments.push({title: title});
+                this.projects.push(this.assignments);
+                console.log(this.projects);
                 this.assignmentTitle = '';
 
             }
@@ -93,7 +95,7 @@ var app = new Vue({
             var projectTitle = this.projectTitle.trim();
             if (projectTitle) {
                 console.log(projectTitle);
-                this.projects.push({title: projectTitle})
+                this.projects.push({project: {title: projectTitle}})
                 this.projectTitle = '';
             }
         },
@@ -119,6 +121,7 @@ var app = new Vue({
             // this.startTime = '';
             // this.endTime = '';
             // this.editable = false;
+
         },
         addProjectTitle: function () {
             var title = projectTitle.trim();

@@ -294,6 +294,7 @@ class ComposerStaticInit39866b84b39b75f34546399e81156d7b
     );
 
     public static $classMap = array (
+        'App\\Assignment' => __DIR__ . '/../..' . '/app/Assignment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -338,7 +339,10 @@ class ComposerStaticInit39866b84b39b75f34546399e81156d7b
         'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
         'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
+        'CreateAssignmentProjectPivotTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_19_200106_create_assignment_project_pivot_table.php',
+        'CreateAssignmentsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_19_200106_create_assignments_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateProjectUserPivotTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_19_200231_create_project_user_pivot_table.php',
         'CreateProjectsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_10_004721_create_projects_table.php',
         'CreateTimesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_09_145304_create_times_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
