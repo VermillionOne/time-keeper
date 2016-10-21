@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Time extends Model
 {
     /**
@@ -13,12 +14,13 @@ class Time extends Model
      */
     protected $fillable = [
         'start_time',
+        'assignment_id',
         'end_time',
         'elapsed_time'
     ];
 
-    public function project()
+    public function assignment()
     {
-        return $this->belongsTo(Assignment::class);
+        return $this->belongsTo('App\Assignment');
     }
 }

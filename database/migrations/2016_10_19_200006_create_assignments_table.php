@@ -13,7 +13,8 @@ class CreateAssignmentsTable extends Migration
     public function up()
     {
         Schema::create('assignments', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
+            $table->increments('assignment_id')->unsigned();
+            $table->integer('project_id')->unsigned();
             $table->string('assignment_title');
             $table->timestamps();
         });

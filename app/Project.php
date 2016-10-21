@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Project extends Model
 {
     /**
@@ -12,18 +13,17 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'start_time',
-        'end_time',
-        'elapsed_time'
+        'user_id',
+        'project_title'
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User');
     }
 
     public function assignment()
     {
-        return $this->hasMany(Assignment::class);
+        return $this->hasMany('App\Assignment');
     }
 }

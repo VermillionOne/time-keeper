@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+
+use Request;
+use App\Project;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $projects = Project::all();
+
+        return view('home')->with('projects', $projects);
+
     }
 }

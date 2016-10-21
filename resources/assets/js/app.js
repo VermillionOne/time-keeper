@@ -107,20 +107,20 @@ var app = new Vue({
              * Adding time instances to the times array
              */
 
-            // var times = getElapsedTime();
+            var times = getElapsedTime();
 
-            // this.times.push();
-            // this.assignments.title = assignmentTitle;
-            // this.assignments.times = this.times;
-            // this.project.title = projectTitle;
-            // this.project.assignments = this.assignments;
+            this.times.push();
+            this.assignments.title = assignmentTitle;
+            this.assignments.times = this.times;
+            this.project.title = projectTitle;
+            this.project.assignments = this.assignments;
 
-            // this.projArr.push(this.project);
+            this.projArr.push(this.project);
 
-            // console.log(this.times);
-            // this.startTime = '';
-            // this.endTime = '';
-            // this.editable = false;
+            console.log(this.times);
+            this.startTime = '';
+            this.endTime = '';
+            this.editable = false;
 
         },
         addProjectTitle: function () {

@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    // dd("test");
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
+
+Route::post('project', 'ProjectsController@store');
+
+Route::post('assignment/{id}', 'AssignmentsController@store');
+
+Route::post('time/{id}', 'TimesController@store');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
